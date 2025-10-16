@@ -166,6 +166,11 @@
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
+
+            &:disabled{
+              background-color: red;
+              cursor:not-allowed;
+            }
         }
 
     }

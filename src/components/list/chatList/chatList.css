@@ -72,3 +72,12 @@
     font-weight: 300;
     }
 }
+
+.item.unread {
+  /* make the entire item use the purple accent color (semi-transparent so content stays readable) */
+  background-color: rgba(128, 0, 255, 0.9);
+  /* keep a subtle deeper left accent to hint selection, but it's optional */
+  border-left: 6px solid rgba(128, 0, 255, 0.9);
+  /* slightly increase contrast for text on the purple background */
+  color: #fff;
+}

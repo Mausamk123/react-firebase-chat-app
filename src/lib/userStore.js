@@ -13,7 +13,8 @@ export const useUserStore = create((set) => ({
       const docSnap = await getDoc(docRef);
 
       if (docSnap.exists()) {
-        set({ currentUser: docSnap.data(), isLoading: false });
+        // include the document id with the user data
+        set({ currentUser: { id: docSnap.id, ...docSnap.data() }, isLoading: false });
       } else {
         set({ currentUser: null, isLoading: false });
       }
